@@ -1,18 +1,15 @@
-import numpy as np
-import matplotlib.pyplot as plt
-
-from sklearn.tree import DecisionTreeClassifier
-
+import re
 from io import StringIO
-from sklearn.tree import export_graphviz
-from imageio import imread
+
+import matplotlib.pyplot as plt
+import numpy as np
+# from imageio import imread
 from scipy import ndimage
 from sklearn.datasets import make_moons
+from sklearn.tree import DecisionTreeClassifier, export_graphviz
 
-import re
-
-from .tools import discrete_scatter
 from .plot_helpers import cm2
+from .tools import discrete_scatter
 
 
 def tree_image(tree, fout=None):
@@ -34,7 +31,7 @@ def tree_image(tree, fout=None):
     if fout is None:
         fout = "tmp"
     graph.render(fout)
-    return imread(fout + ".png")
+    return #imread(fout + ".png")
 
 
 def plot_tree_progressive():

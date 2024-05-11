@@ -1,4 +1,4 @@
-from imageio import imread
+# from imageio import imread
 import matplotlib.pyplot as plt
 
 
@@ -23,5 +23,5 @@ def plot_animal_tree(ax=None):
     mygraph.edge("2", "5", label="True")
     mygraph.edge("2", "6", label="False")
     mygraph.render("tmp")
-    ax.imshow(imread("tmp.png"))
+    # ax.imshow(imread("tmp.png"))
     ax.set_axis_off()
